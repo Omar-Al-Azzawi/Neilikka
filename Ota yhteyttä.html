@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>puutarha/tuotteet</title>
+</head>
+     <body>
+          <div class="topnav" id="myTopnav">
+              <a href="index.html" class="active">Home</a>
+                 <div class="dropdown">
+                    <button class="dropbtn">Tuotteet
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                      <div class="dropdown-content">
+                        <a href="sisäkasvit.html">Sisäkasvit</a>
+                        <a href="#">Ulkokasvit</a>
+                        <a href="tuotteet.html">Kasvien hoito</a>
+                      </div>
+                 </div> 
+                    <a href="Myymälät.html">Myymälät</a>
+                    <a href="Tietoa meistä.html">Tietoa meistä</a>
+                    <a href="Ota yhteyttä.html">Ota yhteyttä</a>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          </div>
+            <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+            <div class="lomake">
+              <h2>Ota yhteyttä</h2>
+             <div id="error_message"></div>
+             <form id="myform">
+               <div class="input_field">
+                 <input type="text" placeholder="Nimi" id="nimi" required>
+                </div>
+                 <div class="input_field">
+                 <input type="text" placeholder="Aihe" id="aihe" required>
+                </div>
+                 <div class="input_field">
+                 <input type="text" placeholder="Puhelinnumero" id="puhelinnumero" required>
+                </div>
+                 <div class="input_field">
+                 <input type="text" placeholder="Sähköposti" id="sähköposti" required>
+                </div>
+                 <div class="input_field">
+                 <textarea name="text" id="viesti" cols="30" rows="10" placeholder="Viesti"></textarea>
+               </div>
+               <div class="checkbox" >
+                <label for="">Haluan tilata Puutarhaliike Neilikan uutiskirjeen</label>
+                 <input type="checkbox">   
+               </div>
+               <div >
+                 <button onclick="lähetä()" class="btn">Lähetä</button>
+                 <p id="note"></p>
+               </div>
+             </form>
+            </div>
+            <p id="note"></p>
+            <script src="script.js"></script>
+        <footer class="footer">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png"/>
+            <img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"/ width="30px">
+            <img src="https://img.icons8.com/metro/26/000000/youtube.png"/ width="30px">
+        </footer>
+    </body>
+</html>
